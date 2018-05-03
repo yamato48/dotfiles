@@ -224,9 +224,10 @@ set showmatch
 set laststatus=2
 
 let no_buffers_menu=1
-if !exists('g:not_finish_vimplug')
-  colorscheme deus
-endif
+" テーマ
+"if !exists('g:not_finish_vimplug')
+"  colorscheme deus
+"endif
 
 set mousemodel=popup
 set t_Co=256

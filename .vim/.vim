@@ -1,0 +1,1 @@
+/Users/yamato48/dotfiles/.vim

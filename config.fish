@@ -6,9 +6,6 @@ set -x PATH $HOME/.Pokemon-Terminal /usr/local/bin /usr/bin /bin /usr/sbin /sbin
 
 # 起動時の文章
 set fish_greeting
-  "aaaaaaaaaaaaaaaa"
-end
-
 
 # vi mode
 fish_vi_key_bindings
@@ -34,19 +31,23 @@ end
 function fish_prompt
   #コマンド失敗時変化
   if [ $status -eq 0 ]
-    set status_face "＼(^o^)／ < "
+    set status_owata (set_color normal)"＼(^o^)／ < "
   else
-    set status_face (set_color red)"／(^o^)＼ < "
+    set status_owata (set_color red)"／(^o^)＼ < "
   end
 
   set -l git_dir (git rev-parse --git-dir 2> /dev/null)
-  set prompt (set_color yellow)(prompt_pwd)
+  set prompt (set_color brgreen)(prompt_pwd)
 
   if test -n "$git_dir"
     echo $prompt [(parse_git_branch)]
-    echo $status_face
+    echo $status_owata
   else
     echo $prompt
-    echo $status_face
+    echo $status_owata
   end
+end
+
+function fish_right_prompt
+    date '+%y/%m/%d %H:%M'
 end

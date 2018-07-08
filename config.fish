@@ -1,4 +1,3 @@
-
 # 起動時の文章
 set fish_greeting
 

@@ -80,6 +80,8 @@ Plug 'honza/vim-snippets'
 Plug 'vim-jp/vimdoc-ja'
 set helplang=ja,en
 
+Plug 'tomtom/tcomment_vim'
+
 "*****************************************************************************
 "" Custom bundles
 "*****************************************************************************

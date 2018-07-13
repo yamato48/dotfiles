@@ -5,4 +5,10 @@ export PATH="/usr/local/bin:$PATH"
 #rbenv
 eval "$(rbenv init -)"
 
+#.bashrcが存在すれば読み込む
+if [ -f ~/.bashrc ] ; then
+. ~/.bashrc
+fi
+
+#fish
 exec fish
